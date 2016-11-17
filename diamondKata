@@ -1,0 +1,62 @@
+const diamond = (n) => {
+  if(n < 1 || n % 2 === 0){
+  return null
+  }
+  
+  var diam = '';
+  
+  for(let i = 0; i < n/2 ; i++){
+    
+  	for(let j = 0; j < i; j++){
+    	diam.concat(' ');
+  	}
+
+  	for(let j = i; j < n; j++){
+    	diam.concat('*');
+  	}
+
+  	diam.concat('\n');
+  }
+  
+  return diam;
+}
+
+// const diamond = (n) => {
+//   if(n < 1 || n % 2 === 0){
+//   return null
+//   }
+  
+//   let diamondString = ''; 
+//   let blankString = '';
+  
+//   for(let i = 0; i < n; i++){
+//     diamondString = diamondString + '*';
+//     blankString = blankString + ' ';
+//   }
+  
+//   let diam = diamondString + '\n';
+
+//   for(let i = 1; i < n/2 ; i++){
+//      let nextLayer = blankString.slice(0,i) + diamondString.slice(0, n - 2*i) +'\n';
+//      diam = nextLayer + diam + nextLayer;
+//   }
+  
+//   return diam;
+// }
+
+
+//   for(let i = 0; i < n/2 ; i++){
+//     var layer = '';
+    
+//     for(let j = 0; j < i; j++){
+//        layer.concat(' ');
+//     }
+
+//     for(let j = i; j < n; j++){
+//        layer.concat('*');
+//     }
+
+//     layer.concat('\n');
+    
+//     diam.concat(layer);
+//   }
